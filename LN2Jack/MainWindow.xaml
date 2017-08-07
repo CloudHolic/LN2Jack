@@ -1,0 +1,24 @@
+﻿<Window x:Class="LN2Jack.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" x:Name="Ln2JackWindow" Title="LN2Jack by CloudHolic" Height="310" Width="700"
+        AllowDrop="True" Drop="Window_Drop" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="40,30,0,0" TextWrapping="Wrap" Text="Osu file path to open:" VerticalAlignment="Top"/>
+        <TextBox x:Name="PathTextBox" HorizontalAlignment="Left" Height="25" Margin="40,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="523" MaxLines="1" Text=""/>
+        <Button Content="Open" Margin="585,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Height="25" Click="Open_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,100,0,0" TextWrapping="Wrap" Text="Output directory:" VerticalAlignment="Top"/>
+        <TextBox x:Name="DirTextBox" HorizontalAlignment="Left" Height="25" Margin="40,130,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="523" MaxLines="1" Text=""/>
+        <Button Content="Open" Margin="585,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Height="25" Click="DirOpenButton_Click"/>
+        <StackPanel Orientation="Horizontal" Margin="40,182,0,0" Height="20" Width="280" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <RadioButton Name="Beat16" Margin="0,0,10,0" GroupName="BeatGroup" Content="1/4(16Beat)" IsChecked="True"/>
+            <RadioButton Name="Beat24" Margin="0,0,10,0" GroupName="BeatGroup" Content="1/6(24Beat)"/>
+            <RadioButton Name="Beat32" Margin="0,0,10,0" GroupName="BeatGroup" Content="1/8(32Beat)"/>
+        </StackPanel>
+        <CheckBox x:Name="EndSnapCheckBox" Content="Ignore end snap" HorizontalAlignment="Left" Margin="350,182,0,0" Width="150" Height="20" VerticalAlignment="Top"/>
+        <CheckBox x:Name="OszCheckBox" Content="Make it as an .osz file" HorizontalAlignment="Left" Margin="500,182,0,0" Width="150" Height="20" VerticalAlignment="Top"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="250,220,0,0" VerticalAlignment="Top" Width="200" Height="35" Click="Start_Click"/>
+    </Grid>
+</Window>
