@@ -113,7 +113,6 @@ namespace LN2Jack
 
                     ZipFile.CreateFromDirectory(newPath, zipPath);
                     Directory.Delete(newPath, true);
-
                 }
                 else if (GlobalData.OutputDir != GlobalData.Directory)
                 {

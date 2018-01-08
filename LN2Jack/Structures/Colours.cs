@@ -38,4 +38,3 @@
         public int Blue { get; set; }
     }
 }
-
